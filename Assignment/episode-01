@@ -1,8 +1,4 @@
-
-
-
-
-# ● What is Emmet?
+ ● What is Emmet?
 
 Emmet is a plugin/tool for code editors (like VS Code, Sublime, etc.) that helps write HTML and CSS faster using abbreviations.
 
@@ -17,7 +13,7 @@ Example: Typing ul>li*3 and hitting Tab expands to:
 
 
 
-# ● Difference between a Library and Framework?
+● Difference between a Library and Framework?
 Feature	Library	Framework
 Control	You call the library	Framework calls your code
 Flexibility	More flexible	More opinionated (fixed structure)
@@ -29,7 +25,7 @@ Example	jQuery, Lodash	Angular, Django
 
 
 
-# ● What is CDN? Why do we use it?
+ What is CDN? Why do we use it?
 
 CDN stands for Content Delivery Network.
 
@@ -50,7 +46,7 @@ Example:
 
 
 
-# ● Why is React known as React?
+● Why is React known as React?
 
 React is called "React" because:
 
@@ -60,7 +56,7 @@ It automatically reacts to data changes and updates the DOM efficiently using it
 
 
 
-# ● What is crossorigin in script tag?
+● What is crossorigin in script tag?
 
 The crossorigin attribute is used when loading scripts from a different domain (CORS-related).
 
@@ -97,7 +93,7 @@ You use React to build components, and ReactDOM to render them into the page.
 
 
 
-# ● Difference between react.development.js and react.production.js via CDN?
+● Difference between react.development.js and react.production.js via CDN?
 File	react.development.js	react.production.js
 Use Case	Development	Production
 Size	Larger (with warnings, checks)	Smaller (optimized)
@@ -131,7 +127,7 @@ Coding assignment:::
 
 
 
-# 1-How Create hello world! in HTML
+1-How Create hello world! in HTML
 
 
 <!DOCTYPE html>
@@ -149,7 +145,7 @@ Coding assignment:::
 </html>
 
 
-# 2- How Create hello world! in JS
+2- How Create hello world! in JS
 
 <!DOCTYPE html>
 <html lang="en">
@@ -171,7 +167,7 @@ Coding assignment:::
 </html>
 
 
-# 3-How Create hello world! in React
+3-How Create hello world! in React
 
 <!DOCTYPE html>
 <html lang="en">
