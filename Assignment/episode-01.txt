@@ -104,13 +104,15 @@ Features	Helpful error messages	Stripped-down, faster
 
 
 
-● What is async and defer in <script> tag?
+● What is async and defer in script tag ?
 
 These attributes control how JavaScript is loaded.
 
 Attribute	When Script Runs	Blocks HTML Parsing?
 async	As soon as it's downloaded	Yes
 defer	After HTML parsing is complete (in order)	No
+
+
 
 Example:
 
@@ -167,7 +169,7 @@ Coding assignment:::
 </html>
 
 
-3-How Create hello world! in React
+ 3-How Create hello world! in React
 
 <!DOCTYPE html>
 <html lang="en">
