@@ -14,18 +14,56 @@ Example: Typing ul>li*3 and hitting Tab expands to:
 
 
 ● Difference between a Library and Framework?
-Feature	Library	Framework
-Control	You call the library	Framework calls your code
-Flexibility	More flexible	More opinionated (fixed structure)
-Usage	Used for specific tasks	Provides a full structure
-Example	jQuery, Lodash	Angular, Django
-
-🟡 React is a Library, Angular is a Framework.
 
 
+Library
+
+A library is a collection of pre-written code (functions, classes, etc.) that you can call whenever you need.
+
+You control the flow of the program. You decide when and where to use the library functions.
+
+It’s like a toolbox – you pick the right tool (function) when you need it.
+
+✅ Examples:
+
+JavaScript → React.js (technically a library for UI)
+
+Python → NumPy, Pandas, Requests
+
+Java → JUnit
+
+Framework
+
+A framework is a bigger structure that defines the overall architecture of your project.
+
+The framework controls the flow. You write your code inside the framework’s rules and structure.
+
+It’s like a house under construction – the framework gives you the foundation and walls, and you just add the furniture.
+
+✅ Examples:
+
+JavaScript → Angular, Vue.js, Next.js
+
+Python → Django, Flask
+
+Java → Spring
+
+Key Difference (Rule of Thumb)
+
+👉 Library: You call the library → you’re in control.
+👉 Framework: Framework calls your code → framework is in control.
+
+This is sometimes called the “Inversion of Control” principle.
+
+⚡ Example:
+
+If you use jQuery (library) → you decide when to call $("#btn").click()
+
+If you use Django (framework) → Django decides when your function runs (like handling a request/response).
 
 
- What is CDN? Why do we use it?
+
+ * What is CDN? Why do we use it?
 
 CDN stands for Content Delivery Network.
 
@@ -83,46 +121,135 @@ Ensuring proper error handling for crossorigin scripts
 
 
 ● What is the difference between React and ReactDOM?
-	React	ReactDOM
-Role	Core library (logic, components)	Deals with rendering to the DOM
-Example Use	React.createElement, Hooks	ReactDOM.render, createRoot
-Package	react	react-dom
 
-You use React to build components, and ReactDOM to render them into the page.
+1. React
+
+What it is:
+React is the core library for building user interfaces.
+
+Purpose:
+It provides the components, hooks, and virtual DOM logic to create UI in a declarative way.
+
+What it doesn’t do:
+React by itself doesn’t know how or where to render your UI (to the browser, mobile app, etc.).
+
+Use Case:
+You use React to define components and UI logic.
+
+✅ Example:
+
+import React from "react";
+
+function App() {
+  return <h1>Hello World</h1>;
+}
+
+2. ReactDOM
+
+What it is:
+ReactDOM is the library that lets React work specifically with the web browser DOM.
+
+Purpose:
+It provides methods to render React components into the actual HTML DOM.
+
+Specialization:
+ReactDOM is just one "renderer." There are others too, like React Native (for mobile), which doesn’t use ReactDOM.
+
+✅ Example:
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+
+Here:
+
+React → lets you build the App component.
+
+ReactDOM → takes App and mounts it into the browser DOM at id="root".
 
 
 
 
 ● Difference between react.development.js and react.production.js via CDN?
-File	react.development.js	react.production.js
-Use Case	Development	Production
-Size	Larger (with warnings, checks)	Smaller (optimized)
-Features	Helpful error messages	Stripped-down, faster
 
-🟡 In production, always use production.js to improve performance.
 
+1. react.development.js
+
+Unminified (big file size, readable code).
+
+Contains helpful warnings, error messages, and checks for developers.
+
+Useful during development/debugging, since it helps you catch mistakes (like invalid props, deprecated APIs, etc.).
+
+Slower performance because of extra checks.
+
+✅ Example:
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+2. react.production.min.js
+
+Minified & optimized (small file size, unreadable code).
+
+Removes all warnings, debug messages, and dev-only checks.
+
+Runs faster and is designed for live websites.
+
+Better for performance & loading speed.
+
+✅ Example:
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
 
 
 ● What is async and defer in script tag ?
 
-These attributes control how JavaScript is loaded.
+Normal <script> tag
 
-Attribute	When Script Runs	Blocks HTML Parsing?
-async	As soon as it's downloaded	Yes
-defer	After HTML parsing is complete (in order)	No
+By default, when the browser sees a <script> tag:
 
+It stops parsing the HTML.
 
+Downloads the script.
 
-Example:
+Runs the script.
 
+Then continues with HTML.
+
+⚠️ This can make the page load slower if the script is large.
+
+async attribute
 <script src="script.js" async></script>
+
+
+Script is downloaded in parallel with HTML parsing.
+
+Once downloaded, the script is executed immediately, even if HTML parsing is not finished.
+
+Multiple scripts with async may execute in random order (whichever finishes downloading first).
+
+✅ Good for: independent scripts (e.g., ads, analytics, tracking).
+❌ Not good for: scripts that depend on each other or on HTML structure.
+
+defer attribute
 <script src="script.js" defer></script>
 
 
-🟡 Use defer for scripts that depend on the full HTML being loaded.
-🟡 Use async for independent,
+Script is downloaded in parallel with HTML parsing.
 
+But execution is deferred until after the HTML is fully parsed.
+
+Scripts with defer are executed in order, as they appear in the page.
+
+✅ Good for: main application scripts (React, Angular, etc.), DOM-related scripts.
+❌ Not for: scripts that must run immediately.
 
 Coding assignment:::
 
