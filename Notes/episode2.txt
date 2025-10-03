@@ -16,3 +16,5 @@
 
 * just like we have npm similarly we have somethings known as npx ,when we write npm it means we are just calling the command of npm like we 
   install some things but npx means executing a package 
+
+
