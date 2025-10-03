@@ -1,0 +1,362 @@
+● What is Emmet? 
+● Difference between a Library and Framework?
+● What is CDN? Why do we use it? 
+● Why is React known as React?
+● What is crossorigin in script tag?
+● What is diference between React and ReactDOM
+● What is difference between react.development.js and react.production.js files via CDN?
+● What is async and defer? -
+
+
+Answer of them are:
+✅ 1. What is Emmet?
+
+Think of Emmet like a text shortcut or autocomplete for HTML/CSS.
+
+🔹 Just like typing "brb" on your phone becomes "be right back", Emmet lets you type ul>li*3 and expands it into:
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+🔹 It's a speed tool — saves time writing repetitive code.
+
+
+
+
+✅ 2. Library vs Framework (Real-life analogy)
+📚 Library
+
+A library is like a cookbook. You pick and use the recipe (code) you need.
+
+You’re in control. You decide when to use it.
+
+Example: React, jQuery
+
+🏗️ Framework
+
+A framework is like a meal kit (e.g., HelloFresh) — it gives you ingredients, steps, and structure.
+
+Framework is in control. You follow its rules.
+
+Example: Angular, Django
+
+🔁 In short:
+
+Library = You call it.
+Framework = It calls you.
+
+
+
+
+✅ 3. What is CDN? Why do we use it?
+📦 CDN = Content Delivery Network
+
+Imagine your website is a pizza shop 🍕, and you want to deliver pizzas globally.
+
+Without CDN: Only 1 shop → slow delivery 🌍
+
+With CDN: Many branches worldwide → faster delivery 🚀
+
+🔹 CDN hosts your static files (JS, CSS, images) closer to the user for fast loading.
+
+Example:
+
+<script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.js"></script>
+
+
+
+
+✅ 4. Why is React called React?
+
+Because React helps the UI react to changes.
+
+📱 Imagine you're using a messaging app. As soon as a new message comes, the chat updates automatically — this is reactive behavior.
+
+🔹 React uses a Virtual DOM to detect changes and update only what's needed, making UI super fast.
+
+
+
+
+✅ 5. What is crossorigin in <script>?
+
+This attribute deals with security and resource sharing when loading scripts from another website (like a CDN).
+
+💡 Think of it like ordering a part from another store. Do you want to send your ID or just get the part anonymously?
+
+anonymous → Don’t send cookies or login info
+
+use-credentials → Send cookies/login info
+
+Example:
+
+<script src="script.js" crossorigin="anonymous"></script>
+
+
+
+
+✅ 6. Difference between React and ReactDOM
+🧠 React
+
+Deals with building components and logic
+
+Like your brain creating ideas
+
+👀 ReactDOM
+
+Renders those components into the actual page (DOM)
+
+Like your hands that draw or build based on your brain’s idea
+
+// React logic
+const element = React.createElement('h1', null, 'Hello!');
+
+// ReactDOM renders it to the page
+ReactDOM.render(element, document.getElementById('root'));
+
+
+
+✅ 7. react.development.js vs react.production.js
+Mode	development.js	production.js
+🐞 Debugging	Shows errors, warnings, logs	Hides warnings
+⚡ Performance	Slower	Faster (optimized)
+🧠 Use case	For developers only	For live/real users
+
+📌 You use development.js when building the app, and production.js when deploying it.
+
+
+
+
+✅ 8. What is async and defer in script tags?
+
+Imagine you’re reading a book 📖 and someone wants to talk to you 🗣️.
+
+🌀 async
+
+They interrupt you immediately when they’re ready (even if you’re mid-sentence).
+
+Script runs as soon as it loads — may interrupt HTML parsing.
+
+<script src="file.js" async></script>
+
+⏳ defer
+
+They wait till you finish reading, then talk.
+
+Script runs after HTML is fully loaded (safer for DOM manipulation).
+
+<script src="file.js" defer></script>
+
+
+
+In Technical language we answer them like:
+
+
+
+● What is Emmet?
+
+Emmet is a plugin/tool for code editors (like VS Code, Sublime, etc.) that helps write HTML and CSS faster using abbreviations.
+
+Example: Typing ul>li*3 and hitting Tab expands to:
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+
+
+● Difference between a Library and Framework?
+Feature	Library	Framework
+Control	You call the library	Framework calls your code
+Flexibility	More flexible	More opinionated (fixed structure)
+Usage	Used for specific tasks	Provides a full structure
+Example	jQuery, Lodash	Angular, Django
+
+🟡 React is a Library, Angular is a Framework.
+
+
+
+
+● What is CDN? Why do we use it?
+
+CDN stands for Content Delivery Network.
+
+It’s a network of servers distributed globally to deliver static content (like JS, CSS, images) faster.
+
+Why use it?
+
+Reduces load on your own server
+
+Increases speed and performance
+
+Improves availability and redundancy
+
+Example:
+
+<script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+
+
+
+
+● Why is React known as React?
+
+React is called "React" because:
+
+It enables reactive and dynamic user interfaces.
+
+It automatically reacts to data changes and updates the DOM efficiently using its virtual DOM.
+
+
+
+● What is crossorigin in script tag?
+
+The crossorigin attribute is used when loading scripts from a different domain (CORS-related).
+
+It controls how the browser handles cross-origin requests.
+
+Common values:
+
+anonymous – No credentials (cookies, HTTP auth) sent.
+
+use-credentials – Sends credentials.
+
+Example:
+
+<script src="..." crossorigin="anonymous"></script>
+
+
+Needed when:
+
+Using CDNs
+
+Ensuring proper error handling for crossorigin scripts
+
+
+
+
+● What is the difference between React and ReactDOM?
+	React	ReactDOM
+Role	Core library (logic, components)	Deals with rendering to the DOM
+Example Use	React.createElement, Hooks	ReactDOM.render, createRoot
+Package	react	react-dom
+
+You use React to build components, and ReactDOM to render them into the page.
+
+
+
+
+● Difference between react.development.js and react.production.js via CDN?
+File	react.development.js	react.production.js
+Use Case	Development	Production
+Size	Larger (with warnings, checks)	Smaller (optimized)
+Features	Helpful error messages	Stripped-down, faster
+
+🟡 In production, always use production.js to improve performance.
+
+
+
+
+● What is async and defer in <script> tag?
+
+These attributes control how JavaScript is loaded.
+
+Attribute	When Script Runs	Blocks HTML Parsing?
+async	As soon as it's downloaded	Yes
+defer	After HTML parsing is complete (in order)	No
+
+Example:
+
+<script src="script.js" async></script>
+<script src="script.js" defer></script>
+
+
+🟡 Use defer for scripts that depend on the full HTML being loaded.
+🟡 Use async for independent,
+
+
+Coding assignment:::
+
+
+
+
+1-How Create hello world! in HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste-React</title>
+</head>
+<body>
+    <div id="root">
+      <h1>Hello world!</h1>  
+    </div>
+</body>
+</html>
+
+
+2- How Create hello world! in JS
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste-React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Hello World! from JavaScript";
+
+      const root = document.getElementById("root");
+      root.appendChild(heading);
+    </script>
+  </body>
+</html>
+
+
+3-How Create hello world! in React
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste-React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      const heading = React.createElement(
+        "h1", //heading
+        { id: "heading", abc: "xyz" }, //id or heading  and attribute
+        "Hello World! from React" // what data we want to put in h1
+      );
+
+      // console.log(heading); //Object
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(heading);
+    </script>
+  </body>
+</html>

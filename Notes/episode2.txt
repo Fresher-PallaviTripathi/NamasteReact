@@ -1,0 +1,18 @@
+* package.json is confirguration for npm it keep tarck on what version of package install into our system (it may be caret ^2.16.3)
+* package-lock.json keeps tracks of exact version that is being install
+* npm is package manger which manage all package which we install in our system
+* buddler (webpack) bundle or package our app properly so it can be shift to production
+* their are two types of dependencies 1- Normal dependencies 2 - devdependencies ,the devdependencies 
+  use for development phase but dependencies are used in production also.
+
+ * .gitignore contains all the files which i don't want to put on github
+
+* CTRL+F for search any specific things in
+* we got emoji by window + . 
+* A transitive dependency is when a package you installed (direct dependency) depends on other packages (its own dependencies).
+* nodu_modules is kind of database where all  our package ,all our files, all our dependencies actual code is there.
+* why we should not required  put node_module on github but we can put package.json and package-lock.json =>if i have package.json and package-lock.json 
+  you can recreate  all your nodu_modules even if it deleted 
+
+* just like we have npm similarly we have somethings known as npx ,when we write npm it means we are just calling the command of npm like we 
+  install some things but npx means executing a package 
