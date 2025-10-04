@@ -1,0 +1,30 @@
+* NPM start is equivalent to NPM run start behind the scenes,execute the package parcel,
+ parcel with index.html we configured this inside our package.json .
+
+* // React.createElement => is basically  create an object => but when we render into The DOM it become HTML
+   React.createElement("Tag which we want to create" ,{attribute or id} , " what are childrean of tag")
+
+* JSX  - is Not HTML in JS ,It's like HTML syntax
+
+* When we Write JSX code then this code is transpiled before reaches the Javascript Engine
+Transpile means the code is converted to the code that browser can understand
+Who is transpiling this code? The answer is Parcel ,But  can parcel do it ourself then answer is=>  No
+it does not do a lot of things by itself. PArcel is like manager,and it have many cabinate minister
+so it gives the responsiblity of this transpilation to package which is known as Babel
+Babel - It takes our  JSX code  and converts into the code that  browser, that JS engine,that React can understand
+
+* If you give attribute to JSX You have to use camel case
+
+* IF we write JSX in multiple line so it is mandatory to use brackets ()
+
+* React.createElement => ReactElement => JS Object => HTMLElement(render)
+
+* // JSX  - is Not HTML in JS ,It's like HTML syntax
+
+* // JSX = Babel transpilesit to React.createElement => ReactElement => JS Object => HTMLElement(render)
+
+* // react component
+  two types- Class Based component - OLD
+             Functional Component  - NEW
+
+* React Functional Component is a function that return some piece of jsx code or Functional Component is Js function which  return reactElement

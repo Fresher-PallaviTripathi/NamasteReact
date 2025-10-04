@@ -1,0 +1,106 @@
+🌟 What is JSX?
+
+JSX (JavaScript XML) is a syntax extension for JavaScript used in React.
+It allows you to write HTML-like code inside JavaScript.
+
+🧠 Simple meaning:
+
+JSX = HTML-like code in JavaScript.
+
+Example:
+
+const heading = <h1>Hello JSX!</h1>;
+
+Under the hood:
+
+JSX is not HTML.
+It gets compiled (transpiled) by Babel into:
+
+const heading = React.createElement("h1", {}, "Hello JSX!");
+
+
+So JSX makes your code cleaner, shorter, and easier to read.
+
+
+
+⚡ Superpowers of JSX
+
+👉HTML-like Syntax in JavaScript
+
+Lets you write UI code that looks like HTML but lives inside JS.
+
+Example: <h1>Hello JSX!</h1>
+
+👉Dynamic Content with {}
+
+Insert JS variables, expressions, and functions directly.
+
+Example: <h1>Hello {userName}</h1>
+
+👉JS Expressions Anywhere
+
+Supports calculations, ternary operators, and functions inside {}.
+
+Example: {isLoggedIn ? "Welcome" : "Login"}
+
+Prevents XSS Attacks Automatically
+
+JSX escapes any dangerous HTML or scripts to keep the app safe.
+
+👉Component Composition Made Easy
+
+Nest one component inside another naturally.
+
+Example: <Header /><Footer />
+
+👉Clean and Readable Code
+
+Much shorter and easier to read than multiple React.createElement() calls.
+
+👉Supports Attributes & Props
+
+Can pass className, style, id, title, and custom props.
+
+Example: <h1 className="title" style={{ color: "blue" }}>Hello</h1>
+
+👉Can Render Lists & Loops
+
+Use map() inside JSX to render dynamic lists.
+
+Example: {items.map(item => <li>{item}</li>)}
+
+👉Conditional Rendering
+
+Render elements conditionally using ternary operators or logical &&.
+
+Example: {isLoggedIn && <button>Logout</button>}
+
+👉Supports Fragments
+
+Return multiple elements without an extra wrapper <div> using <>...</>.
+
+
+🍿 Role of type attribute in <script> tag
+
+Specifies the scripting language or how the browser should interpret the script.
+
+Common values:
+
+👉text/javascript → Default JS code.
+
+👉module → ES6 modules (import / export).
+
+👉text/babel → JSX code (for Babel standalone in HTML).
+
+👉application/json → Embed JSON data inside <script>.
+
+👉Helps the browser know how to execute the script correctly.
+
+
+❤️ {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+
+👉{TitleComponent} → Refers to the component function itself, not rendered.
+
+👉{<TitleComponent />} → Executes and renders the component.
+
+👉{<TitleComponent></TitleComponent>} → Same as above, used when passing children inside the component.

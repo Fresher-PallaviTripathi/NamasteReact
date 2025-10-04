@@ -120,10 +120,10 @@ ReactDOM.render(element, document.getElementById('root'));
 
 
 ✅ 7. react.development.js vs react.production.js
-Mode	development.js	production.js
-🐞 Debugging	Shows errors, warnings, logs	Hides warnings
-⚡ Performance	Slower	Faster (optimized)
-🧠 Use case	For developers only	For live/real users
+Mode	development.js          	         production.js
+🐞 Debugging	Shows errors, warnings,    logs	Hides warnings
+⚡ Performance	Slower	                   Faster (optimized)
+🧠 Use case	For developers only    	      For live/real users
 
 📌 You use development.js when building the app, and production.js when deploying it.
 

@@ -1,7 +1,7 @@
 * package.json is confirguration for npm it keep tarck on what version of package install into our system (it may be caret ^2.16.3)
 * package-lock.json keeps tracks of exact version that is being install
 * npm is package manger which manage all package which we install in our system
-* buddler (webpack) bundle or package our app properly so it can be shift to production
+* bundler (webpack) bundle or package our app properly so it can be shift to production
 * their are two types of dependencies 1- Normal dependencies 2 - devdependencies ,the devdependencies 
   use for development phase but dependencies are used in production also.
 

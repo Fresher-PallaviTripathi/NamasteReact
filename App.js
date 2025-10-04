@@ -1,43 +1,47 @@
-import React  from "react";
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I am Namaste react 🚀"),
-    React.createElement("h2", {}, "I am H2 tags"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am H1 tags"),
-    React.createElement("h2", {}, "I am H2 tags"),
-  ]),
-]);
+// React Element
+// const heading = (
+//   <h1 className="head" tabIndex="5">
+//     Namaste React In Jsx 🚀
+//   </h1>
+// );
 
-console.log(parent);
+// const Title = () => (
+//   <h1 className="head" tabIndex="5">
+//     Namaste React In Jsx 🚀
+//   </h1>
+// );
 
+// const title = (
+//   <h1 className="head" tabIndex="5">
+//     Namaste React 😊
+//   </h1>
+// );
 
+// // React Functional Component
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// const HeadingComponent = () => (
+//   <div id="container">
+//     <h1 className="heading">Namaste React Functional Component</h1>
+//   </div>
+// );
 
-root.render(parent); 
+// // Component Composition
 
-
-
-// const parent = React.createElement("div", { id: "parent" }, [
-//   React.createElement("div", { id: "child", key: "child1" }, [
-//     React.createElement("h1", { key: "h1-1" }, "I am  Namaste React 🚀"),
-//     React.createElement("h2", { key: "h2-1" }, "I am H2 tags"),
-//   ]),
-//   React.createElement("div", { id: "child2", key: "child2" }, [
-//     React.createElement("h1", { key: "h1-2" }, "I am H1 tags"),
-//     React.createElement("h2", { key: "h2-2" }, "I am H2 tags"),
-//   ]),
-// ]);
-
-
-// console.log(parent);
-
-
+// const HeadingComponent2 = () => (
+//   <div id="container">
+//     {Title()}
+//     <Title />
+//     <Title></Title>
+//     {title}
+//     <h1 className="heading">Namaste React Functional Component</h1>
+//   </div>
+// );
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(parent); 
+// root.render(<HeadingComponent2 />);
+
+

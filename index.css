@@ -1,4 +1,70 @@
-#heading {
-    color: blue;
-    background: #000;
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e90ff; /* Nice blue */
+  color: white;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* User icon styling */
+.user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .search-bar input {
+    width: 120px;
+  }
+  .logo h2 {
+    display: none;
+  }
 }
